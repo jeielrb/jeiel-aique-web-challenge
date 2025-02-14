@@ -61,8 +61,23 @@ export const content = [
   },
 ];
 
-// Utility function to format blog details
-export function formatBlogs(blogs: any[]) {
+interface Blog {
+  id: number;
+  title: string;
+  description: string;
+  image: { uri: string };
+  url: string;
+}
+
+export function formatBlogs(
+  blogs: Blog[]
+): {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  url: string;
+}[] {
   return blogs.map((blog) => ({
     id: blog.id,
     title: blog.title,

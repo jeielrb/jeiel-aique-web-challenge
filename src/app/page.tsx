@@ -62,11 +62,12 @@ export default function Home() {
               // onClick={() => (window.location.href = data.url)}
             >
               {/* Image Section */}
-              <div className="relative h-[230px] w-full">
-                <img
+              <div className="relative h-[230px] w-full rounded-tl-lg rounded-tr-lg overflow-hidden">
+                <Image
                   src={data.image}
                   alt={data.title}
-                  className="w-full h-full object-cover rounded-t-lg"
+                  layout="fill"
+                  priority
                 />
               </div>
 
